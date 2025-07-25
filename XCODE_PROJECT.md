@@ -12,7 +12,17 @@ This repository is now a complete Xcode project that can be opened directly in X
    cd ReadyCheck
    ```
 
-2. **Open in Xcode** (choose one):
+2. **Setup CocoaPods** (Required):
+   ```bash
+   # Option A: Automated setup (recommended)
+   ./setup_cocoapods.sh
+   
+   # Option B: Manual setup
+   flutter pub get
+   cd ios && pod install
+   ```
+
+3. **Open in Xcode**:
    ```bash
    # Option A: Use convenience script
    ./open_xcode.sh
@@ -21,7 +31,7 @@ This repository is now a complete Xcode project that can be opened directly in X
    open ios/Runner.xcworkspace
    ```
 
-3. **Build and Run**:
+4. **Build and Run**:
    - Select your target device or simulator in Xcode
    - Press ⌘+R to build and run the app
 
@@ -75,6 +85,8 @@ ReadyCheck/
 5. Ensure the file is added to your Xcode project
 
 ### Dependencies:
+- **Prerequisites**: Flutter SDK and CocoaPods must be installed
+- **Setup**: Run `./setup_cocoapods.sh` for automated setup
 - CocoaPods dependencies are managed via `Podfile`
 - Run `pod install` in the `ios/` directory when adding new native dependencies
 - Flutter dependencies are managed via `pubspec.yaml`
@@ -90,10 +102,12 @@ ReadyCheck/
 ## 🔍 Troubleshooting
 
 ### Common Issues:
-1. **Build Errors**: Clean build folder (Product → Clean Build Folder)
-2. **Dependencies**: Run `pod install` in the `ios/` directory
-3. **Firebase**: Ensure `GoogleService-Info.plist` is properly configured
-4. **Flutter**: Run `flutter clean && flutter pub get`
+1. **CocoaPods Not Installed**: Run `sudo gem install cocoapods`
+2. **Flutter Not Found**: Install Flutter SDK from https://docs.flutter.dev/get-started/install
+3. **Pod Install Fails**: Ensure Flutter is installed and run `flutter pub get` first
+4. **Build Errors**: Clean build folder (Product → Clean Build Folder)
+5. **Dependencies**: Use `./setup_cocoapods.sh` for automated setup
+6. **Firebase**: Ensure `GoogleService-Info.plist` is properly configured
 
 ### Getting Help:
 - Check `verify_ios_setup.sh` to ensure all files are present

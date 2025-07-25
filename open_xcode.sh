@@ -11,6 +11,21 @@ if [ ! -f "pubspec.yaml" ]; then
     exit 1
 fi
 
+# Check if CocoaPods dependencies are installed
+if [ ! -d "ios/Pods" ] || [ ! -f "ios/Podfile.lock" ]; then
+    echo "⚠️  CocoaPods dependencies not found."
+    echo "   Run './setup_cocoapods.sh' to set up CocoaPods automatically, or:"
+    echo "   1. flutter pub get"
+    echo "   2. cd ios && pod install"
+    echo ""
+    read -p "Do you want to continue opening Xcode anyway? (y/N): " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo "❌ Cancelled. Please set up CocoaPods first."
+        exit 1
+    fi
+fi
+
 # Check if Xcode workspace exists
 if [ ! -f "ios/Runner.xcworkspace/contents.xcworkspacedata" ]; then
     echo "⚠️  Warning: Xcode workspace not found. The project will still open but you may need to run 'pod install' first."
