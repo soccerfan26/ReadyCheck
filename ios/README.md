@@ -26,11 +26,12 @@ The project includes a placeholder `GoogleService-Info.plist` file for developme
 5. Ensure the file is added to your Xcode project
 
 ### 3. Open in Xcode
+The project now includes a pre-configured workspace:
 ```bash
 open Runner.xcworkspace
 ```
 
-**Important**: Always open the `.xcworkspace` file, not the `.xcodeproj` file, when using CocoaPods.
+**Note**: The `.xcworkspace` file is now included in the repository for immediate Xcode compatibility. When you run `pod install`, it will be updated automatically.
 
 ### 4. Build and Run
 - Select your target device or simulator
