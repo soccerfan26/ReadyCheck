@@ -89,8 +89,24 @@ service cloud.firestore {
 - Flutter SDK (3.0.0 or higher)
 - Xcode (for iOS development)
 - iOS Simulator or iOS device
+- CocoaPods (will be installed automatically if missing)
 
-### 1. Clone and Setup
+### 1. Automated Setup (Recommended)
+```bash
+git clone <repository-url>
+cd ReadyCheck
+./install.sh
+```
+
+The install script will:
+- Verify all prerequisites are installed
+- Install Flutter dependencies (`flutter pub get`)
+- Install iOS CocoaPods dependencies (`cd ios && pod install`)
+- Provide guidance for Firebase setup
+
+### 2. Manual Setup (Alternative)
+If you prefer to install dependencies manually:
+
 ```bash
 git clone <repository-url>
 cd ReadyCheck
@@ -98,6 +114,7 @@ flutter pub get
 ```
 
 ### 2. iOS Setup
+If you used the automated install script, this step is already completed. For manual setup:
 ```bash
 cd ios
 pod install  # Install iOS dependencies
