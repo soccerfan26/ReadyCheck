@@ -79,6 +79,13 @@ app.*.map.json
 **/ios/**/GoogleService-Info.plist
 !**/ios/**/GoogleService-Info.plist.example
 
+# Note: The following generated files are normally ignored but are included 
+# in this project to ensure Xcode compatibility out of the box:
+# - ios/Flutter/Generated.xcconfig (force added with git add -f)
+# - ios/Runner/GeneratedPluginRegistrant.* (force added with git add -f)  
+# - ios/Runner/GoogleService-Info.plist (placeholder for development)
+# Replace GoogleService-Info.plist with your own Firebase configuration.
+
 # Web related
 lib/generated_plugin_registrant.dart
 

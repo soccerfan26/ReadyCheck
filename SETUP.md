@@ -104,6 +104,8 @@ pod install  # Install iOS dependencies
 cd ..
 ```
 
+**Important for Xcode**: Always open `ios/Runner.xcworkspace` instead of `ios/Runner.xcodeproj` when using CocoaPods.
+
 ### 3. Firebase Configuration
 - Follow the Firebase Integration Setup steps above
 - Ensure GoogleService-Info.plist is properly configured
@@ -112,6 +114,13 @@ cd ..
 ```bash
 flutter run
 ```
+
+**Alternative - Running from Xcode:**
+1. Open the workspace: `open ios/Runner.xcworkspace`
+2. Select your target device or simulator
+3. Press Cmd+R to build and run
+
+**Note**: Always use `.xcworkspace` file when opening in Xcode, not the `.xcodeproj` file.
 
 ## Usage
 
