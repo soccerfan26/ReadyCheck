@@ -14,7 +14,8 @@ A Flutter iOS app for managing equipment inspections with Firebase backend integ
 1. **Setup Firebase**: Follow the instructions in [SETUP.md](SETUP.md) to configure Firebase
 2. **Install Dependencies**: Run `flutter pub get`
 3. **iOS Setup**: Run `cd ios && pod install`
-4. **Run App**: Execute `flutter run`
+4. **Open in Xcode**: Run `open ios/Runner.xcworkspace` (use .xcworkspace, not .xcodeproj)
+5. **Run App**: Execute `flutter run` or build/run from Xcode
 
 ## Requirements
 
