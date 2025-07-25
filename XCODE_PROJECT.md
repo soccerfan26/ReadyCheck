@@ -18,7 +18,6 @@ This repository is now a complete Xcode project that can be opened directly in X
    ./setup_cocoapods.sh
    
    # Option B: Manual setup
-   flutter pub get
    cd ios && pod install
    ```
 

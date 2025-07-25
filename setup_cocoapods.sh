@@ -27,22 +27,20 @@ else
     echo "✅ CocoaPods is already installed ($(pod --version))"
 fi
 
-# Check if Flutter is installed
+# Check if Flutter is installed, but don't fail if it's not
 if ! command -v flutter &> /dev/null; then
-    echo "❌ Flutter is not installed or not in PATH."
-    echo "Please install Flutter first: https://docs.flutter.dev/get-started/install/macos"
-    exit 1
+    echo "⚠️  Flutter is not installed or not in PATH."
+    echo "The project has been configured to work without Flutter for basic iOS development."
+    echo "For full Flutter functionality, install Flutter: https://docs.flutter.dev/get-started/install/macos"
+    echo ""
+    echo "Continuing with CocoaPods setup..."
 else
     echo "✅ Flutter is installed ($(flutter --version | head -n 1))"
+    echo "📱 Running Flutter pub get..."
+    flutter pub get
 fi
 
-# Navigate to iOS directory
-cd ios
-
-echo "📱 Running Flutter pub get..."
-cd ..
-flutter pub get
-
+# Navigate to iOS directory and install pods
 echo "🔧 Installing CocoaPods dependencies..."
 cd ios
 pod install

@@ -12,11 +12,10 @@ if [ ! -f "pubspec.yaml" ]; then
 fi
 
 # Check if CocoaPods dependencies are installed
-if [ ! -d "ios/Pods" ] || [ ! -f "ios/Podfile.lock" ]; then
+if [ ! -d "ios/Pods" ]; then
     echo "⚠️  CocoaPods dependencies not found."
     echo "   Run './setup_cocoapods.sh' to set up CocoaPods automatically, or:"
-    echo "   1. flutter pub get"
-    echo "   2. cd ios && pod install"
+    echo "   1. cd ios && pod install"
     echo ""
     read -p "Do you want to continue opening Xcode anyway? (y/N): " -n 1 -r
     echo

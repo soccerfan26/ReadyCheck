@@ -14,8 +14,7 @@ This repository contains a **complete Xcode project** that can be opened directl
 
 ### Open in Xcode
 
-**Prerequisites**: Ensure Flutter SDK and CocoaPods are installed on your system:
-- Install Flutter: https://docs.flutter.dev/get-started/install
+**Prerequisites**: Ensure CocoaPods is installed on your system:
 - Install CocoaPods: `sudo gem install cocoapods`
 
 ```bash
