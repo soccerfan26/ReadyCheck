@@ -1,6 +1,26 @@
 # ReadyCheck - Equipment Inspection App
 
-A Flutter iOS app for managing equipment inspections with Firebase backend integration.
+A complete **Xcode Project** for iOS equipment inspection management with Flutter and Firebase integration.
+
+## 🍎 Xcode Project Ready
+
+This repository contains a **complete Xcode project** that can be opened directly in Xcode:
+
+- **Location**: `ios/Runner.xcworkspace`
+- **Project Type**: iOS app with Flutter engine integration
+- **Languages**: Swift, Objective-C, Dart
+- **Dependencies**: Managed via CocoaPods
+- **Firebase**: Pre-configured for iOS
+
+### Open in Xcode
+```bash
+# Option 1: Use the convenience script
+./open_xcode.sh
+
+# Option 2: Open directly
+open ios/Runner.xcworkspace
+```
+> **Important**: Always use `.xcworkspace` file, not `.xcodeproj` when opening in Xcode.
 
 ## Features
 
